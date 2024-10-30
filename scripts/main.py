@@ -30,7 +30,7 @@ model = LlamaForCausalLM.from_pretrained(
         torch_dtype=torch.bfloat16,
         low_cpu_mem_usage=True,
         quantization_config=None,
-        device_map="auto"
+        device_map="cuda"
     )
 
 tokenizer = LlamaTokenizer.from_pretrained(args.model)
